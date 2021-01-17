@@ -1,0 +1,40 @@
+{
+  "FirestoreDepositor": {
+    "type": "object",
+    "title": "Firestore Depositor",
+    "options": {
+      "collapsed": true
+    },
+    "properties": {
+      "_package": {
+        "type": "string",
+        "title": "Pypi Package Name",
+        "template": "xialib-firestore"
+      },
+      "_module": {
+        "type": "string",
+        "title": "Module Name",
+        "template": "xialib_firestore"
+      },
+      "db": {
+        "type": "string",
+        "title": "Firestore Database",
+        "watch": {
+          "db": "connectors"
+        },
+        "enumSource": [
+          {
+            "source": "db",
+            "filter": "{% if item.option._tags.includes('google.cloud.firestore.Client') %}1{% endif %}",
+            "value": "{{item.name}}"
+          }
+        ]
+      }
+    },
+    "required": [
+      "_package",
+      "_module",
+      "db"
+    ]
+  }
+}

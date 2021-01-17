@@ -1,0 +1,42 @@
+{
+  "db-firestore": {
+    "type": "object",
+    "title": "Firestore Database",
+    "options": {
+      "collapsed": true
+    },
+    "properties": {
+      "_package": {
+        "type": "string",
+        "title": "Pypi Package Name",
+        "template": "google-cloud-firestore"
+      },
+      "_module": {
+        "type": "string",
+        "title": "Module Name",
+        "template": "google.cloud.firestore"
+      },
+      "_class": {
+        "type": "string",
+        "title": "Class Name",
+        "template": "Client"
+      },
+      "_tags": {
+        "type": "array",
+        "title": "Tags",
+        "format": "table",
+        "items": {
+          "type": "string"
+        },
+        "default": [
+          "google.cloud.firestore.Client"
+        ]
+      }
+    },
+    "required": [
+      "_package",
+      "_module",
+      "_class"
+    ]
+  }
+}

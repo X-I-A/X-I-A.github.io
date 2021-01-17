@@ -1,0 +1,12 @@
+[
+  {
+    "module_name": "FirestoreDepositor",
+    "definition": "https://a.b.c",
+    "connectors": [
+      {
+        "connector_name": "db-firestore",
+        "definition": "https://d.e.f"
+      }
+    ]
+  }
+]
