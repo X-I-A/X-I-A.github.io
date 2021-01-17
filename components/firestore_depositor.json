@@ -1,5 +1,4 @@
 {
-  "FirestoreDepositor": {
     "type": "object",
     "title": "Firestore Depositor",
     "options": {
@@ -36,5 +35,4 @@
       "_module",
       "db"
     ]
-  }
 }
