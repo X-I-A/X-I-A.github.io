@@ -42,6 +42,7 @@
     "required": [
       "_package",
       "_module",
+      "_tags",
       "db"
     ]
 }

@@ -28,5 +28,14 @@
       }]
     }
   },
-  "required": ["_package", "_module", "fs"]
+  "_tags": {
+    "type": "array",
+    "title": "Tags",
+    "format": "table",
+    "items": {
+      "type": "string"
+    },
+    "default": ["xialib.Archiver", "xialib.ListArchiver"]
+  },
+  "required": ["_package", "_module", "_tags", "fs"]
 }
