@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "title": "GCS File System",
+  "options": {
+    "collapsed": true
+  },
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "gcsfs"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "gcsfs"
+    },
+    "_class": {
+      "type": "string",
+      "title": "Class Name",
+      "template": "GCSFileSystem"
+    },
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": ["gcsfs.GCSFileSystem"]
+    }
+  },
+  "required": ["_package", "_module", "_class", "_tags"]
+}
