@@ -1,4 +1,5 @@
 {
+  "db-firestore": {
     "type": "object",
     "title": "Firestore Database",
     "options": {
@@ -37,4 +38,5 @@
       "_module",
       "_class"
     ]
+  }
 }
