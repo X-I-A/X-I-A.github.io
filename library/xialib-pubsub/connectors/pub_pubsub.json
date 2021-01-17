@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "title": "Firestore Database",
+    "title": "Pubsub Publisher Client",
     "options": {
       "collapsed": true
     },
@@ -8,17 +8,17 @@
       "_package": {
         "type": "string",
         "title": "Pypi Package Name",
-        "template": "google-cloud-firestore"
+        "template": "google-cloud-pubsub"
       },
       "_module": {
         "type": "string",
         "title": "Module Name",
-        "template": "google.cloud.firestore"
+        "template": "google.cloud.pubsub_v1"
       },
       "_class": {
         "type": "string",
         "title": "Class Name",
-        "template": "Client"
+        "template": "PublisherClient"
       },
       "_tags": {
         "type": "array",
@@ -28,7 +28,7 @@
           "type": "string"
         },
         "default": [
-          "google.cloud.firestore.Client"
+          "google.cloud.pubsub_v1.PublisherClient"
         ]
       }
     },

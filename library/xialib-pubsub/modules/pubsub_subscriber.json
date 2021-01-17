@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "title": "Pubsub Subscriber",
+  "options": {
+    "collapsed": true
+  },
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "xialib-pubsub"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "xialib_pubsub"
+    },
+    "pub": {
+      "type": "string",
+      "title": "Pub/Sub Connector",
+      "watch": {
+        "pub": "connectors"
+      },
+      "enumSource": [{
+        "source": "pub",
+        "filter": "{% if item.option._tags.includes('google.cloud.pubsub_v1.SubscriberClient') %}1{% endif %}",
+        "value": "{{item.name}}"
+      }]
+    },
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "xialib.Subscriber"
+      ]
+    }
+  },
+  "required": ["_package", "_module", "_tags", "pub"]
+}
