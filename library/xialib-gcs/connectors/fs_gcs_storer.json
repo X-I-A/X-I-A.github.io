@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "title": "Google Cloud Storage Storer",
+  "options": {
+    "collapsed": true
+  },
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "xialib-gcs"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "xialib_gcs"
+    },
+    "_class": {
+      "type": "string",
+      "title": "Class Name",
+      "template": "GCSStorer"
+    },
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": ["xialib.IOStorer", "xialib.RWStorer", "xialib.Storer"]
+    }
+  },
+  "required": ["_package", "_module", "_class", "_tags"]
+}

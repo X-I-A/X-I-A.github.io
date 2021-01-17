@@ -28,6 +28,15 @@
             "value": "{{item.name}}"
           }
         ]
+      },
+      "_tags": {
+        "type": "array",
+        "title": "Tags",
+        "format": "table",
+        "items": {
+          "type": "string"
+        },
+        "default": ["xialib.Depositor"]
       }
     },
     "required": [

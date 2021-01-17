@@ -2,12 +2,12 @@
   {
     "module_name": "FirestoreDepositor",
     "module_title": "Firestore Depositor",
-    "definition": "https://x-i-a.github.io/library/xialib-firestore/modules/firestore_depositor.json",
+    "definition": "http://repo.x-i-a.com/library/xialib-firestore/modules/firestore_depositor.json",
     "connectors": [
       {
         "connector_name": "db-firestore",
         "connector_title": "Firestore Database",
-        "definition": "https://x-i-a.github.io/library/xialib-firestore/connectors/db_firestore.json"
+        "definition": "http://repo.x-i-a.com//library/xialib-firestore/connectors/db_firestore.json"
       }
     ]
   }
