@@ -1,0 +1,26 @@
+{
+  "modules": [
+    {
+      "name": "PubsubPublisher",
+      "title": "Pubsub Publisher",
+      "#ref": "http://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_publisher.json"
+    },
+    {
+      "name": "PubsubSubscriber",
+      "title": "Pubsub Subscriber",
+      "#ref": "http://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_subscriber.json"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "pub-pubsub",
+      "title": "Pubsub Publisher Client",
+      "#ref": "http://repo.x-i-a.com/library/xialib-pubsub/connectors/pub_pubsub.json"
+    },
+    {
+      "name": "sub-pubsub",
+      "title": "Pubsub Subscriber Client",
+      "#ref": "http://repo.x-i-a.com/library/xialib-pubsub/connectors/sub_pubsub.json"
+    }
+  ]
+}

@@ -1,14 +1,16 @@
-[
-  {
-    "module_name": "FirestoreDepositor",
-    "module_title": "Firestore Depositor",
-    "definition": "http://repo.x-i-a.com/library/xialib-firestore/modules/firestore_depositor.json",
-    "connectors": [
-      {
-        "connector_name": "db-firestore",
-        "connector_title": "Firestore Database",
-        "definition": "http://repo.x-i-a.com//library/xialib-firestore/connectors/db_firestore.json"
-      }
-    ]
-  }
-]
+{
+  "modules": [
+    {
+      "name": "FirestoreDepositor",
+      "title": "Firestore Depositor",
+      "#ref": "http://repo.x-i-a.com/library/xialib-firestore/modules/firestore_depositor.json"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "db-firestore",
+      "title": "Firestore Database",
+      "#ref": "http://repo.x-i-a.com/library/xialib-firestore/connectors/db_firestore.json"
+    }
+  ]
+}
