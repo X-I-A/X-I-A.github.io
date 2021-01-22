@@ -1,4 +1,8 @@
 {
+  "package": {
+    "name": "xialib",
+    "version": "0.2.7"
+  },
   "modules": [
     {
       "name": "IoListArchiver",

@@ -1,4 +1,8 @@
 {
+  "package": {
+    "name": "xialib-gcs",
+    "version": "0.1.3"
+  },
   "modules": [
     {
       "name": "GcsStorer",
@@ -13,7 +17,7 @@
       "ref": "http://repo.x-i-a.com/library/xialib-gcs/connectors/fs_gcsfs.json"
     },
     {
-      "name": "fs-gcs_storer",
+      "name": "fs-gcs-storer",
       "title": "Google Cloud Storage Storer",
       "ref": "http://repo.x-i-a.com/library/xialib-gcs/connectors/fs_gcs_storer.json"
     }
