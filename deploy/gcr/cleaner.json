@@ -39,6 +39,22 @@
         "filter": "{% if item.option._tags.includes('xialib.Archiver') %}1{% endif %}",
         "value": "{{item.name}}"
       }]
+    },
+    "_deploy": {
+      "type": "object",
+      "title": "Deployment Option",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Service Name",
+          "default": "cloud-run-insight-cleaner"
+        },
+        "user": {
+          "type": "string",
+          "title": "Service Account",
+          "default": "insight-cleaner"
+        }
+      }
     }
   }
 }
