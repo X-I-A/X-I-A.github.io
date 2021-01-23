@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "title": "Cleaner Service",
+  "format": "grid",
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "pyinsight"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "pyinsight"
+    },
+    "_class": {
+      "type": "string",
+      "title": "Class Name",
+      "template": "Cleaner"
+    },
+    "depositor": {
+      "type": "string",
+      "watch": {
+        "depositor": "modules"
+      },
+      "enumSource": [{
+        "source": "depositor",
+        "filter": "{% if item.option._tags.includes('xialib.Depositor') %}1{% endif %}",
+        "value": "{{item.name}}"
+      }]
+    },
+    "archiver": {
+      "type": "string",
+      "watch": {
+        "archiver": "modules"
+      },
+      "enumSource": [{
+        "source": "archiver",
+        "filter": "{% if item.option._tags.includes('xialib.Archiver') %}1{% endif %}",
+        "value": "{{item.name}}"
+      }]
+    }
+  }
+}
