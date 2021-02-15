@@ -7,14 +7,14 @@
     {
       "name": "FirestoreDepositor",
       "title": "Firestore Depositor",
-      "ref": "http://repo.x-i-a.com/library/xialib-firestore/modules/firestore_depositor.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-firestore/modules/firestore_depositor.json"
     }
   ],
   "connectors": [
     {
       "name": "db-firestore",
       "title": "Firestore Database",
-      "ref": "http://repo.x-i-a.com/library/xialib-firestore/connectors/db_firestore.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-firestore/connectors/db_firestore.json"
     }
   ]
 }

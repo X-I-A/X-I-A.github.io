@@ -3,7 +3,7 @@ import json
 import requests
 
 def generate_catalog(package_name: str):
-    repo_root = "http://repo.x-i-a.com/library"
+    repo_root = "https://repo.x-i-a.com/library"
     result_json = {"package": {"name": package_name, "version": ""},
                    "modules": [], "connectors": []}
     package_path = os.path.join("..", "library", package_name)

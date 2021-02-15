@@ -7,7 +7,7 @@
     {
       "name": "IoListArchiver",
       "title": "IO Based List Archiver",
-      "ref": "http://repo.x-i-a.com/library/xialib/modules/io_list_archiver.json"
+      "ref": "https://repo.x-i-a.com/library/xialib/modules/io_list_archiver.json"
     }
   ],
   "connectors": []
