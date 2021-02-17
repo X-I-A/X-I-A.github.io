@@ -18,7 +18,7 @@
     "_class": {
       "type": "string",
       "title": "Class Name",
-      "template": "GCSStorer"
+      "template": "GcsStorer"
     },
     "_tags": {
       "type": "array",
