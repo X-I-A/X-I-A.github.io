@@ -39,7 +39,7 @@
       "destination": {
         "type": "string",
         "title": "Destination",
-        "description": "project id / Cloud Run url"
+        "description": "project id / Cloud Run url",
         "options": {
           "grid_columns": 4
         }
@@ -48,7 +48,8 @@
         "type": "string",
         "title": "Topic Name",
         "options": {
-          "grid_columns": 4
+          "grid_columns": 4,
+          "grid_break": true
         }
       },
       "_package": {
