@@ -36,6 +36,21 @@
         },
         "default": "pubsub"
       },
+      "destination": {
+        "type": "string",
+        "title": "Destination",
+        "description": "project id / Cloud Run url"
+        "options": {
+          "grid_columns": 4
+        }
+      },
+      "topic": {
+        "type": "string",
+        "title": "Topic Name",
+        "options": {
+          "grid_columns": 4
+        }
+      },
       "_package": {
         "type": "string",
         "title": "Pypi Package Name",
@@ -146,6 +161,8 @@
       "name",
       "insight",
       "publisher",
+      "destination",
+      "topic",
       "_package",
       "_module",
       "_class"
