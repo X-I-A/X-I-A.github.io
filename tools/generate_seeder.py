@@ -2,21 +2,31 @@ import json
 
 service_schema = {
                         "type": "object",
-                        "headerTemplate": "{{ self.name }}",
+                        "headerTemplate": "{{ self._deploy.name }}",
                         "format": "grid-strict",
                         "properties": {
-                            "name": {
-                                "type": "string",
-                                "title": "Service Name",
+                            "_deploy": {
+                                "type": "object",
+                                "format": "grid-strict",
                                 "options": {
-                                    "grid_columns": 4,
-                                }
-                            },
-                            "insight": {
-                                "type": "boolean",
-                                "title": "Save to Data Lake?",
-                                "options": {
-                                    "grid_columns": 4,
+                                    "grid_columns": 12,
+                                    "grid_break": True,
+                                },
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "title": "Service Name",
+                                        "options": {
+                                            "grid_columns": 4,
+                                        }
+                                    },
+                                    "insight": {
+                                        "type": "boolean",
+                                        "title": "Save to Data Lake?",
+                                        "options": {
+                                            "grid_columns": 4,
+                                        },
+                                    },
                                 }
                             },
                             "publisher": {
