@@ -150,5 +150,5 @@ service_schema = {
                         },
                     },
 
-with open('service.json', 'w') as fp:
+with open('seeder.json', 'w') as fp:
     fp.write(json.dumps(service_schema, ensure_ascii=False, indent=2))
