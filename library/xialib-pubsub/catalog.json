@@ -1,30 +1,35 @@
 {
   "package": {
     "name": "xialib-pubsub",
-    "version": "0.1.1"
+    "version": ""
   },
   "modules": [
     {
+      "name": "PubsubGcrPublisher",
+      "title": "Pubsub Publisher to Cloud Run",
+      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_gcr_publisher.json?cache=0"
+    },
+    {
       "name": "PubsubPublisher",
       "title": "Pubsub Publisher",
-      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_publisher.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_publisher.json?cache=0"
     },
     {
       "name": "PubsubSubscriber",
       "title": "Pubsub Subscriber",
-      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_subscriber.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/modules/pubsub_subscriber.json?cache=0"
     }
   ],
   "connectors": [
     {
       "name": "pub-pubsub",
       "title": "Pubsub Publisher Client",
-      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/connectors/pub_pubsub.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/connectors/pub_pubsub.json?cache=0"
     },
     {
       "name": "sub-pubsub",
       "title": "Pubsub Subscriber Client",
-      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/connectors/sub_pubsub.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-pubsub/connectors/sub_pubsub.json?cache=0"
     }
   ]
 }

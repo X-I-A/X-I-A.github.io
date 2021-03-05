@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "title": "Pubsub Publisher to Cloud Run",
+  "options": {
+    "collapsed": true
+  },
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "xialib-pubsub"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "xialib_pubsub"
+    },
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "xialib.Publisher"
+      ]
+    }
+  },
+  "required": ["_package", "_module", "_tags"]
+}

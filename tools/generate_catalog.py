@@ -33,9 +33,9 @@ def generate_catalog(package_name: str):
 
 # print(generate_catalog("xialib"))
 
-generate_catalog("xialib")
+#generate_catalog("xialib")
 #generate_catalog("xialib-firestore")
 #generate_catalog("xialib-gcs")
-#generate_catalog("xialib-pubsub")
+generate_catalog("xialib-pubsub")
 #resp = requests.get("http://repo.x-i-a.com/library/xialib-pubsub/catalog.json")
 #print(resp.json())
