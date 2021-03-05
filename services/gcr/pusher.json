@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "headerTemplate": "{{ self.name }}",
+  "format": "grid-strict",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Service Name",
+      "options": {
+        "grid_columns": 4,
+        "grid_break": true
+      }
+    },
+    "service": {
+      "type": "object",
+      "title": "Service Configuration",
+      "format": "grid-strict",
+      "options": {
+        "grid_columns": 12,
+        "grid_break": true,
+        "display_required_only": true
+      },
+      "properties": {
+        "_package": {
+          "type": "string",
+          "title": "Pypi Package Name",
+          "template": "pyxeed",
+          "options": {
+            "grid_columns": 4
+          }
+        },
+        "_module": {
+          "type": "string",
+          "title": "Module Name",
+          "template": "pyxeed",
+          "options": {
+            "grid_columns": 4
+          }
+        },
+        "_class": {
+          "type": "string",
+          "title": "Class Name",
+          "template": "Seeder",
+          "options": {
+            "grid_columns": 4,
+            "grid_break": true
+          }
+        },
+        "adaptor": {
+          "type": "string",
+          "title": "Adaptor",
+          "watch": {
+            "adaptor": "modules"
+          },
+          "enumSource": [
+            {
+              "source": "adaptor",
+              "filter": "{% if item.option._tags.includes('xialib.Adaptor') %}1{% endif %}",
+              "value": "{{item.name}}"
+            }
+          ],
+          "options": {
+            "grid_columns": 4
+          }
+        }
+      },
+      "required": [
+        "adaptor",
+        "_package",
+        "_module",
+        "_class"
+      ]
+    },
+    "deploy": {
+      "type": "object",
+      "title": "Deployment options",
+      "format": "grid-strict",
+      "options": {
+        "grid_columns": 12,
+        "grid_break": true
+      },
+      "properties": {
+        "sa-name": {
+          "type": "string",
+          "title": "Service Account Name",
+          "options": {
+            "grid_columns": 4
+          }
+        }
+      },
+      "required": [
+        "sa-name"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "service",
+    "deploy"
+  ]
+}

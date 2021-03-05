@@ -1,6 +1,6 @@
 import json
 
-service_schema = {
+seeder_schema = {
     "items": {
                         #"$ref": "https://repo.x-i-a.com/services/gcr/seeder.json?cache=0",
                         "type": "object",
@@ -144,7 +144,7 @@ service_schema = {
                             "deploy": {
                                 "type": "object",
                                 "title": "Deployment options",
-                                "format": "grid",
+                                "format": "grid-strict",
                                 "options": {
                                     "grid_columns": 12,
                                     "grid_break": True,
@@ -187,5 +187,100 @@ service_schema = {
                     },
 }
 
+pusher_schema = {
+    "items": {
+                        # "$ref": "https://repo.x-i-a.com/services/gcr/pusher.json?cache=0",
+                        "type": "object",
+                        "headerTemplate": "{{ self.name }}",
+                        "format": "grid-strict",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "title": "Service Name",
+                                "options": {
+                                    "grid_columns": 4,
+                                    "grid_break": True,
+                                }
+                            },
+                            "service": {
+                                "type": "object",
+                                "title": "Service Configuration",
+                                "format": "grid-strict",
+                                "options": {
+                                    "grid_columns": 12,
+                                    "grid_break": True,
+                                    "display_required_only": True,
+                                },
+                                "properties": {
+                                    "_package": {
+                                        "type": "string",
+                                        "title": "Pypi Package Name",
+                                        "template": "pyxeed",
+                                        "options": {
+                                            "grid_columns": 4,
+                                        }
+                                    },
+                                    "_module": {
+                                        "type": "string",
+                                        "title": "Module Name",
+                                        "template": "pyxeed",
+                                        "options": {
+                                            "grid_columns": 4,
+                                        }
+                                    },
+                                    "_class": {
+                                        "type": "string",
+                                        "title": "Class Name",
+                                        "template": "Seeder",
+                                        "options": {
+                                            "grid_columns": 4,
+                                            "grid_break": True,
+                                        },
+                                    },
+                                    "adaptor": {
+                                        "type": "string",
+                                        "title": "Adaptor",
+                                        "watch": {
+                                            "adaptor": "modules",
+                                        },
+                                        "enumSource": [{
+                                            "source": "adaptor",
+                                            "filter": "{% if item.option._tags.includes('xialib.Adaptor') %}1{% endif %}",
+                                            "value": "{{item.name}}"
+                                        }],
+                                        "options": {
+                                            "grid_columns": 4,
+                                        },
+                                    },
+                                },
+                                "required": ["adaptor", "_package", "_module", "_class"],
+                            },
+                            "deploy": {
+                                "type": "object",
+                                "title": "Deployment options",
+                                "format": "grid-strict",
+                                "options": {
+                                    "grid_columns": 12,
+                                    "grid_break": True,
+                                },
+                                "properties": {
+                                    "sa-name": {
+                                        "type": "string",
+                                        "title": "Service Account Name",
+                                        "options": {
+                                            "grid_columns": 4,
+                                        }
+                                    },
+                                },
+                                "required": ["sa-name"],
+                            }
+                        },
+                        "required": ["name", "service", "deploy"],
+                    },
+}
+
 with open('seeder.json', 'w') as fp:
-    fp.write(json.dumps(service_schema["items"], ensure_ascii=False, indent=2))
+    fp.write(json.dumps(seeder_schema["items"], ensure_ascii=False, indent=2))
+
+with open('pusher.json', 'w') as fp:
+    fp.write(json.dumps(pusher_schema["items"], ensure_ascii=False, indent=2))

@@ -155,7 +155,7 @@
     "deploy": {
       "type": "object",
       "title": "Deployment options",
-      "format": "grid",
+      "format": "grid-strict",
       "options": {
         "grid_columns": 12,
         "grid_break": true
