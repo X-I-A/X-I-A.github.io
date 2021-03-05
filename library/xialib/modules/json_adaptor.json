@@ -27,6 +27,10 @@
         "value": "{{item.name}}"
       }]
     },
+    "location": {
+      "type": "string",
+      "title": "Json File Location"
+    },
     "_tags": {
       "type": "array",
       "title": "Tags",
@@ -40,5 +44,5 @@
       ]
     }
   },
-  "required": ["_package", "_module", "_tags", "fs"]
+  "required": ["_package", "_module", "_tags", "fs", "location"]
 }
