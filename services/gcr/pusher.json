@@ -24,7 +24,7 @@
         "_package": {
           "type": "string",
           "title": "Pypi Package Name",
-          "template": "pyxeed",
+          "template": "pyagent",
           "options": {
             "grid_columns": 4
           }
@@ -32,7 +32,7 @@
         "_module": {
           "type": "string",
           "title": "Module Name",
-          "template": "pyxeed",
+          "template": "pyagent",
           "options": {
             "grid_columns": 4
           }
@@ -40,7 +40,7 @@
         "_class": {
           "type": "string",
           "title": "Class Name",
-          "template": "Seeder",
+          "template": "Pusher",
           "options": {
             "grid_columns": 4,
             "grid_break": true

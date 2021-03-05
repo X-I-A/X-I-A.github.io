@@ -215,7 +215,7 @@ pusher_schema = {
                                     "_package": {
                                         "type": "string",
                                         "title": "Pypi Package Name",
-                                        "template": "pyxeed",
+                                        "template": "pyagent",
                                         "options": {
                                             "grid_columns": 4,
                                         }
@@ -223,7 +223,7 @@ pusher_schema = {
                                     "_module": {
                                         "type": "string",
                                         "title": "Module Name",
-                                        "template": "pyxeed",
+                                        "template": "pyagent",
                                         "options": {
                                             "grid_columns": 4,
                                         }
@@ -231,7 +231,7 @@ pusher_schema = {
                                     "_class": {
                                         "type": "string",
                                         "title": "Class Name",
-                                        "template": "Seeder",
+                                        "template": "Pusher",
                                         "options": {
                                             "grid_columns": 4,
                                             "grid_break": True,
