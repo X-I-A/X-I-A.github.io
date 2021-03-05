@@ -14,7 +14,7 @@ def generate_catalog(package_name: str):
             connector_detail = json.load(fp)
             connector_name = filename.replace("_", "-")[:-5]
             connector_title = connector_detail['title']
-            connector_ref = "/".join([repo_root, package_name, "connectors", filename])
+            connector_ref = "/".join([repo_root, package_name, "connectors", filename]) + "?cache=0"
             connector = {"name": connector_name, "title": connector_title, "ref": connector_ref}
             result_json["connectors"].append(connector)
 
@@ -23,7 +23,7 @@ def generate_catalog(package_name: str):
             module_detail = json.load(fp)
             module_name = ''.join([s.title() for s in filename[:-5].split('_')])
             module_title = module_detail['title']
-            module_ref = "/".join([repo_root, package_name, "modules", filename])
+            module_ref = "/".join([repo_root, package_name, "modules", filename]) + "?cache=0"
             module = {"name": module_name, "title": module_title, "ref": module_ref}
             result_json["modules"].append(module)
 
@@ -33,9 +33,9 @@ def generate_catalog(package_name: str):
 
 # print(generate_catalog("xialib"))
 
-#generate_catalog("xialib")
-generate_catalog("xialib-firestore")
-generate_catalog("xialib-gcs")
-generate_catalog("xialib-pubsub")
+generate_catalog("xialib")
+#generate_catalog("xialib-firestore")
+#generate_catalog("xialib-gcs")
+#generate_catalog("xialib-pubsub")
 #resp = requests.get("http://repo.x-i-a.com/library/xialib-pubsub/catalog.json")
 #print(resp.json())

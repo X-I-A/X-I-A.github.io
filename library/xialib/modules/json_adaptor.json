@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "title": "Adaptor to generate Json Files",
+  "options": {
+    "collapsed": true
+  },
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "xialib"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "xialib"
+    },
+    "fs": {
+      "type": "string",
+      "title": "Read-Writer Storer",
+      "watch": {
+        "fs": "connectors"
+      },
+      "enumSource": [{
+        "source": "fs",
+        "filter": "{% if item.option._tags.includes('xialib.RWStorer') %}1{% endif %}",
+        "value": "{{item.name}}"
+      }]
+    },
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "xialib.Adaptor",
+        "xialib.FileAdaptor"
+      ]
+    }
+  },
+  "required": ["_package", "_module", "_tags", "fs"]
+}

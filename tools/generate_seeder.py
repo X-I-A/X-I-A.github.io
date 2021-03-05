@@ -1,6 +1,8 @@
 import json
 
 service_schema = {
+    "items": {
+                        #"$ref": "https://repo.x-i-a.com/services/gcr/seeder.json?cache=0",
                         "type": "object",
                         "headerTemplate": "{{ self.name }}",
                         "format": "grid-strict",
@@ -170,12 +172,20 @@ service_schema = {
                                             "grid_break": True,
                                         },
                                     },
+                                    "sa-name": {
+                                        "type": "string",
+                                        "title": "Service Account Name",
+                                        "options": {
+                                            "grid_columns": 4,
+                                        }
+                                    },
                                 },
-                                "required": ["insight", "destination", "topic"],
+                                "required": ["insight", "destination", "topic", "sa-name"],
                             }
                         },
                         "required": ["name", "service", "deploy"],
                     },
+}
 
 with open('seeder.json', 'w') as fp:
-    fp.write(json.dumps(service_schema, ensure_ascii=False, indent=2))
+    fp.write(json.dumps(service_schema["items"], ensure_ascii=False, indent=2))

@@ -1,13 +1,18 @@
 {
   "package": {
     "name": "xialib",
-    "version": "0.2.7"
+    "version": ""
   },
   "modules": [
     {
       "name": "IoListArchiver",
       "title": "IO Based List Archiver",
-      "ref": "https://repo.x-i-a.com/library/xialib/modules/io_list_archiver.json"
+      "ref": "https://repo.x-i-a.com/library/xialib/modules/io_list_archiver.json?cache=0"
+    },
+    {
+      "name": "JsonAdaptor",
+      "title": "Adaptor to generate Json Files",
+      "ref": "https://repo.x-i-a.com/library/xialib/modules/json_adaptor.json?cache=0"
     }
   ],
   "connectors": []
