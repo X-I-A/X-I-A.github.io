@@ -166,6 +166,57 @@
               }
             ]
           }
+        },
+        "routes": {
+          "type": "array",
+          "title": "Topic Level Routes",
+          "format": "table",
+          "description": "Apply when no table level routes found",
+          "options": {
+            "grid_columns": 12
+          },
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "title": "Target List",
+            "properties": {
+              "source": {
+                "type": "string",
+                "title": "Source",
+                "watch": {
+                  "source": "services.dispatcher.deploy.sources"
+                },
+                "enumSource": [
+                  {
+                    "source": "source"
+                  }
+                ],
+                "options": {
+                  "grid_columns": 6
+                }
+              },
+              "target": {
+                "type": "string",
+                "title": "Target",
+                "watch": {
+                  "target": "services.dispatcher.deploy.targets"
+                },
+                "enumSource": [
+                  {
+                    "source": "target",
+                    "value": "{{item.topic}}"
+                  }
+                ],
+                "options": {
+                  "grid_columns": 6
+                }
+              }
+            },
+            "required": [
+              "source",
+              "target"
+            ]
+          }
         }
       },
       "required": [

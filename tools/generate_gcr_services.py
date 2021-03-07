@@ -1,3 +1,4 @@
+import os
 import json
 
 seeder_schema = {
@@ -458,6 +459,50 @@ dispatcher_schema = {
                                         }],
                                     },
                                 },
+                                "routes": {
+                                    "type": "array",
+                                    "title": "Topic Level Routes",
+                                    "format": "table",
+                                    "description": "Apply when no table level routes found",
+                                    "options": {
+                                        "grid_columns": 12,
+                                    },
+                                    "uniqueItems": True,
+                                    "items": {
+                                        "type": "object",
+                                        "title": "Target List",
+                                        "properties": {
+                                            "source": {
+                                                "type": "string",
+                                                "title": "Source",
+                                                "watch": {
+                                                    "source": "services.dispatcher.deploy.sources",
+                                                },
+                                                "enumSource": [{
+                                                    "source": "source",
+                                                }],
+                                                "options": {
+                                                    "grid_columns": 6,
+                                                },
+                                            },
+                                            "target": {
+                                                "type": "string",
+                                                "title": "Target",
+                                                "watch": {
+                                                    "target": "services.dispatcher.deploy.targets",
+                                                },
+                                                "enumSource": [{
+                                                    "source": "target",
+                                                    "value": "{{item.topic}}"
+                                                }],
+                                                "options": {
+                                                    "grid_columns": 6,
+                                                },
+                                            },
+                                        },
+                                        "required": ["source", "target"],
+                                    },
+                                }
                             },
                             "required": ["sa-name"],
                         }
@@ -465,11 +510,11 @@ dispatcher_schema = {
                     "required": ["name", "service", "deploy"],
                 },
 }
-with open('seeder.json', 'w') as fp:
+with open(os.path.join('..', 'services', 'gcr', 'seeder.json'), 'w') as fp:
     fp.write(json.dumps(seeder_schema["items"], ensure_ascii=False, indent=2))
 
-with open('pusher.json', 'w') as fp:
+with open(os.path.join('..', 'services', 'gcr', 'pusher.json'), 'w') as fp:
     fp.write(json.dumps(pusher_schema["items"], ensure_ascii=False, indent=2))
 
-with open('dispatcher.json', 'w') as fp:
+with open(os.path.join('..', 'services', 'gcr', 'dispatcher.json'), 'w') as fp:
     fp.write(json.dumps(dispatcher_schema["dispatcher"], ensure_ascii=False, indent=2))
