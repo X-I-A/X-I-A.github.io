@@ -271,8 +271,29 @@ pusher_schema = {
                                             "grid_columns": 4,
                                         }
                                     },
+                                    "topics": {
+                                        "type": "array",
+                                        "title": "Connected Topics",
+                                        "format": "table",
+                                        "options": {
+                                            "grid_columns": 8,
+                                        },
+                                        "minItems": 1,
+                                        "uniqueItems": True,
+                                        "items": {
+                                            "type": "string",
+                                            "title": "Connected Topics",
+                                            "watch": {
+                                                "seeder": "services.seeders"
+                                            },
+                                            "enumSource": [{
+                                                "source": "seeder",
+                                                "value": "{{item.deploy.topic}}"
+                                            }],
+                                        },
+                                    },
                                 },
-                                "required": ["sa-name"],
+                                "required": ["sa-name", "topics"],
                             }
                         },
                         "required": ["name", "service", "deploy"],

@@ -86,10 +86,34 @@
           "options": {
             "grid_columns": 4
           }
+        },
+        "topics": {
+          "type": "array",
+          "title": "Connected Topics",
+          "format": "table",
+          "options": {
+            "grid_columns": 8
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "title": "Connected Topics",
+            "watch": {
+              "seeder": "services.seeders"
+            },
+            "enumSource": [
+              {
+                "source": "seeder",
+                "value": "{{item.deploy.topic}}"
+              }
+            ]
+          }
         }
       },
       "required": [
-        "sa-name"
+        "sa-name",
+        "topics"
       ]
     }
   },
