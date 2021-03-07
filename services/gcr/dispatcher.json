@@ -1,0 +1,181 @@
+{
+  "type": "object",
+  "title": "Dispatcher Service",
+  "format": "grid-strict",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Service Name",
+      "options": {
+        "grid_columns": 4,
+        "grid_break": true
+      },
+      "default": "xia-dispatcher"
+    },
+    "service": {
+      "type": "object",
+      "title": "Service Configuration",
+      "format": "grid-strict",
+      "options": {
+        "grid_columns": 12,
+        "grid_break": true,
+        "display_required_only": true
+      },
+      "properties": {
+        "_package": {
+          "type": "string",
+          "title": "Pypi Package Name",
+          "template": "pyinsight",
+          "options": {
+            "grid_columns": 4
+          }
+        },
+        "_module": {
+          "type": "string",
+          "title": "Module Name",
+          "template": "pyinsight",
+          "options": {
+            "grid_columns": 4
+          }
+        },
+        "_class": {
+          "type": "string",
+          "title": "Class Name",
+          "template": "Dispatcher",
+          "options": {
+            "grid_columns": 4,
+            "grid_break": true
+          }
+        },
+        "publisher": {
+          "type": "array",
+          "title": "Publisher List",
+          "format": "table",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "title": "Publisher",
+            "watch": {
+              "publisher": "modules"
+            },
+            "enumSource": [
+              {
+                "source": "publisher",
+                "filter": "{% if item.option._tags.includes('xialib.Publisher') %}1{% endif %}",
+                "value": "{{item.name}}"
+              }
+            ],
+            "options": {
+              "grid_columns": 4
+            }
+          },
+          "default": [
+            "pubsub"
+          ]
+        }
+      },
+      "required": [
+        "publisher",
+        "_package",
+        "_module",
+        "_class"
+      ]
+    },
+    "deploy": {
+      "type": "object",
+      "title": "Deployment options",
+      "format": "grid-strict",
+      "options": {
+        "grid_columns": 12,
+        "grid_break": true
+      },
+      "properties": {
+        "sa-name": {
+          "type": "string",
+          "title": "Service Account Name",
+          "options": {
+            "grid_columns": 4
+          }
+        },
+        "targets": {
+          "type": "array",
+          "format": "table",
+          "title": "Target Topics",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "title": "Target List",
+            "properties": {
+              "publisher_id": {
+                "type": "string",
+                "title": "Publisher",
+                "watch": {
+                  "publisher": "services.dispatcher.service.publisher"
+                },
+                "enumSource": [
+                  {
+                    "source": "publisher"
+                  }
+                ],
+                "options": {
+                  "grid_columns": 4
+                }
+              },
+              "destination": {
+                "type": "string",
+                "title": "Destination",
+                "options": {
+                  "grid_columns": 4
+                }
+              },
+              "topic": {
+                "type": "string",
+                "title": "Topic ID",
+                "options": {
+                  "grid_columns": 4,
+                  "grid_break": true
+                }
+              }
+            },
+            "required": [
+              "publisher_id",
+              "destination",
+              "topic"
+            ]
+          }
+        },
+        "sources": {
+          "type": "array",
+          "title": "Source Topics",
+          "format": "table",
+          "options": {
+            "grid_columns": 12
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "title": "Source Topics",
+            "watch": {
+              "seeder": "services.seeders"
+            },
+            "enumSource": [
+              {
+                "source": "seeder",
+                "value": "{{item.deploy.topic}}"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "sa-name"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "service",
+    "deploy"
+  ]
+}

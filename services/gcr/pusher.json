@@ -100,12 +100,17 @@
             "type": "string",
             "title": "Connected Topics",
             "watch": {
-              "seeder": "services.seeders"
+              "seeder": "services.seeders",
+              "dispatcher": "services.dispatcher.deploy.targets"
             },
             "enumSource": [
               {
                 "source": "seeder",
                 "value": "{{item.deploy.topic}}"
+              },
+              {
+                "source": "dispatcher",
+                "value": "{{item.topic}}"
               }
             ]
           }
