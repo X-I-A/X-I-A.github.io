@@ -14,16 +14,16 @@
       "type": "string",
       "title": "Module Name",
       "template": "xialib_gcs"
-    }
-  },
-  "_tags": {
-    "type": "array",
-    "title": "Tags",
-    "format": "table",
-    "items": {
-      "type": "string"
     },
-    "default": ["xialib.IOStorer", "xialib.RWStorer", "xialib.Storer"]
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": ["xialib.IOStorer", "xialib.RWStorer", "xialib.Storer"]
+    }
   },
   "required": ["_package", "_module", "_tags"]
 }
