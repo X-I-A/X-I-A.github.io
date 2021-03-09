@@ -384,6 +384,7 @@ dispatcher_schema = {
                                     "options": {
                                         "grid_columns": 4,
                                     },
+                                    "default": "config/routes.zip",
                                 },
                                 "storer": {
                                     "type": "string",
