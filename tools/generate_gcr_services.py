@@ -378,8 +378,32 @@ dispatcher_schema = {
                                     },
                                     "default": ["pubsub"],
                                 },
+                                "route_file": {
+                                    "type": "string",
+                                    "title": "Table specific routes file location",
+                                    "options": {
+                                        "grid_columns": 4,
+                                    },
+                                },
+                                "storer": {
+                                    "type": "string",
+                                    "title": "Storer",
+                                    "description": "Table specific routes file reader",
+                                    "watch": {
+                                        "storer": "modules"
+                                    },
+                                    "enumSource": [{
+                                        "source": "storer",
+                                        "filter": "{% if item.option._tags.includes('xialib.IOStorer') %}1{% endif %}",
+                                        "value": "{{item.name}}"
+                                    }],
+                                    "options": {
+                                        "grid_columns": 4,
+                                        "grid_break": True,
+                                    },
+                                },
                             },
-                            "required": ["publisher", "_package", "_module", "_class"],
+                            "required": ["publisher", "route_file", "_package", "_module", "_class"],
                         },
                         "deploy": {
                             "type": "object",
