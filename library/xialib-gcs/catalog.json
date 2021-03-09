@@ -7,19 +7,19 @@
     {
       "name": "GcsStorer",
       "title": "Google Cloud Storage Storer",
-      "ref": "https://repo.x-i-a.com/library/xialib-gcs/modules/gcs_storer.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-gcs/modules/gcs_storer.json?cache=0"
     }
   ],
   "connectors": [
     {
       "name": "fs-gcsfs",
       "title": "GCS File System",
-      "ref": "https://repo.x-i-a.com/library/xialib-gcs/connectors/fs_gcsfs.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-gcs/connectors/fs_gcsfs.json?cache=0"
     },
     {
       "name": "fs-gcs-storer",
       "title": "Google Cloud Storage Storer",
-      "ref": "https://repo.x-i-a.com/library/xialib-gcs/connectors/fs_gcs_storer.json"
+      "ref": "https://repo.x-i-a.com/library/xialib-gcs/connectors/fs_gcs_storer.json?cache=0"
     }
   ]
 }
