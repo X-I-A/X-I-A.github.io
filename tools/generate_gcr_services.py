@@ -670,7 +670,7 @@ data_lake_schema = {
                                                     },
                                                     "template": "{{archiver}}",
                                                     "watch": {
-                                                        "archiver": "services.data-lake.depositor",
+                                                        "archiver": "services.data-lake.archiver",
                                                     },
                                                 },
                                                 "publisher": {
@@ -822,7 +822,7 @@ data_lake_schema = {
                                                     },
                                                     "template": "{{archiver}}",
                                                     "watch": {
-                                                        "archiver": "services.data-lake.depositor",
+                                                        "archiver": "services.data-lake.archiver",
                                                     },
                                                 },
                                             },
@@ -1009,7 +1009,7 @@ data_lake_schema = {
                                                     },
                                                     "template": "{{depositor}}",
                                                     "watch": {
-                                                        "depositor": "services.data-lake.depositor",
+                                                        "depositor": "services.data-lake.archiver",
                                                     },
                                                 },
                                                 "archiver": {
