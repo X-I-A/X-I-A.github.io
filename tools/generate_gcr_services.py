@@ -721,7 +721,7 @@ data_lake_schema = {
                                                 },
                                             },
                                             "required": ["_package", "_module", "_class", "depositor", "archiver",
-                                                         "storer", "route_file", "publisher"],
+                                                         "route_file", "publisher"],
                                         },
                                         "deploy": {
                                             "type": "object",

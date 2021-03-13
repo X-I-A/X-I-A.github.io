@@ -194,7 +194,6 @@
                 "_class",
                 "depositor",
                 "archiver",
-                "storer",
                 "route_file",
                 "publisher"
               ]
