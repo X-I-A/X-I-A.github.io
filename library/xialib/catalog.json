@@ -5,6 +5,11 @@
   },
   "modules": [
     {
+      "name": "BasicStorer",
+      "title": "Local File System Based Storer",
+      "ref": "https://repo.x-i-a.com/library/xialib/modules/basic_storer.json?cache=0"
+    },
+    {
       "name": "IoListArchiver",
       "title": "IO Based List Archiver",
       "ref": "https://repo.x-i-a.com/library/xialib/modules/io_list_archiver.json?cache=0"

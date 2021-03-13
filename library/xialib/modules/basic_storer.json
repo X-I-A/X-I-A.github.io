@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "title": "Local File System Based Storer",
+  "options": {
+    "collapsed": true
+  },
+  "properties": {
+    "_package": {
+      "type": "string",
+      "title": "Pypi Package Name",
+      "template": "xialib"
+    },
+    "_module": {
+      "type": "string",
+      "title": "Module Name",
+      "template": "xialib"
+    },
+    "_tags": {
+      "type": "array",
+      "title": "Tags",
+      "format": "table",
+      "items": {
+        "type": "string"
+      },
+      "default": ["xialib.IOStorer", "xialib.RWStorer", "xialib.Storer"]
+    }
+  },
+  "required": ["_package", "_module", "_tags", "fs", "location"]
+}
