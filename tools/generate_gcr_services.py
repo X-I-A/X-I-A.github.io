@@ -663,7 +663,7 @@ data_lake_schema = {
                                                 },
                                                 "archiver": {
                                                     "type": "string",
-                                                    "title": "Depositor",
+                                                    "title": "Archiver",
                                                     "options": {
                                                         "grid_columns": 4,
                                                         "grid_break": True,
@@ -815,7 +815,7 @@ data_lake_schema = {
                                                 },
                                                 "archiver": {
                                                     "type": "string",
-                                                    "title": "Depositor",
+                                                    "title": "Archiver",
                                                     "options": {
                                                         "grid_columns": 4,
                                                         "grid_break": True,
@@ -1014,7 +1014,7 @@ data_lake_schema = {
                                                 },
                                                 "archiver": {
                                                     "type": "string",
-                                                    "title": "Depositor",
+                                                    "title": "Archiver",
                                                     "options": {
                                                         "grid_columns": 4,
                                                         "grid_break": True,
