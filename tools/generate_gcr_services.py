@@ -154,9 +154,16 @@ seeder_schema = {
                                     "insight": {
                                         "type": "string",
                                         "title": "Save to Data Lake?",
+                                        "watch": {
+                                            "receiver": "services.data-lake.in",
+                                        },
+                                        "enumSource": [{
+                                            "source": "receiver",
+                                        }, ""],
                                         "options": {
                                             "grid_columns": 4,
-                                        }
+                                        },
+                                        "default": "",
                                     },
                                     "destination": {
                                         "type": "string",
