@@ -154,7 +154,6 @@ seeder_schema = {
                                     "insight": {
                                         "type": "string",
                                         "title": "Save to Data Lake endpoint?",
-                                        "description": "You can remove Data Lake Connection By removing this property",
                                         "watch": {
                                             "receiver": "services.data-lake.in",
                                         },
