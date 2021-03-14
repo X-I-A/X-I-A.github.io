@@ -552,19 +552,29 @@ data_lake_schema = {
                     "format": "grid-strict",
                     "properties": {
                         "in": {
-                            "type": "string",
-                            "title": "Data Receive Endpoint",
+                            "type": "array",
+                            "title": "Data In Endpoints",
                             "options": {
-                                "grid_columns": 4,
+                                "grid_columns": 6,
                             },
+                            "format": "table",
+                            "items": {
+                                "type": "string",
+                                "title": "endpoint"
+                            }
                         },
                         "out": {
-                            "type": "string",
-                            "title": "Data Load Endpoint",
+                            "type": "array",
+                            "title": "Data Out Endpoints",
                             "options": {
-                                "grid_columns": 4,
+                                "grid_columns": 6,
                                 "grid_break": True,
                             },
+                            "format": "table",
+                            "items": {
+                                "type": "string",
+                                "title": "endpoint"
+                            }
                         },
                         "name-prefix": {
                             "type": "string",
