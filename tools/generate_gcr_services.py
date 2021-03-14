@@ -152,7 +152,7 @@ seeder_schema = {
                                 },
                                 "properties": {
                                     "insight": {
-                                        "type": "boolean",
+                                        "type": "string",
                                         "title": "Save to Data Lake?",
                                         "options": {
                                             "grid_columns": 4,
@@ -1167,7 +1167,7 @@ data_lake_schema = {
                             "required": ["cleaner", "merger", "receiver", "packager", "loader"],
                         },
                     },
-                    "required": ["name-prefix", "sa-prefix", "depositor", "archiver", "services"],
+                    "required": ["in", "out", "name-prefix", "sa-prefix", "depositor", "archiver", "services"],
                 },
 }
 

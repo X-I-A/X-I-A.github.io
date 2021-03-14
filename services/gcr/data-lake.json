@@ -701,6 +701,8 @@
     }
   },
   "required": [
+    "in",
+    "out",
     "name-prefix",
     "sa-prefix",
     "depositor",

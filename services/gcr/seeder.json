@@ -162,7 +162,7 @@
       },
       "properties": {
         "insight": {
-          "type": "boolean",
+          "type": "string",
           "title": "Save to Data Lake?",
           "options": {
             "grid_columns": 4
