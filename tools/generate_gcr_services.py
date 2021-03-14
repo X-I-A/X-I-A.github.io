@@ -543,6 +543,21 @@ data_lake_schema = {
                     "title": "Data Lake",
                     "format": "grid-strict",
                     "properties": {
+                        "in": {
+                            "type": "string",
+                            "title": "Data Receive Endpoint",
+                            "options": {
+                                "grid_columns": 4,
+                            },
+                        },
+                        "out": {
+                            "type": "string",
+                            "title": "Data Load Endpoint",
+                            "options": {
+                                "grid_columns": 4,
+                                "grid_break": True,
+                            },
+                        },
                         "name-prefix": {
                             "type": "string",
                             "title": "Service Name Prefix",
