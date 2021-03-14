@@ -1009,7 +1009,7 @@ data_lake_schema = {
                                                     },
                                                     "template": "{{depositor}}",
                                                     "watch": {
-                                                        "depositor": "services.data-lake.archiver",
+                                                        "depositor": "services.data-lake.depositor",
                                                     },
                                                 },
                                                 "archiver": {
@@ -1021,7 +1021,7 @@ data_lake_schema = {
                                                     },
                                                     "template": "{{archiver}}",
                                                     "watch": {
-                                                        "archiver": "services.data-lake.depositor",
+                                                        "archiver": "services.data-lake.archiver",
                                                     },
                                                 },
                                             },
