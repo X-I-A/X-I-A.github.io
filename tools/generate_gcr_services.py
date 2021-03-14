@@ -157,9 +157,9 @@ seeder_schema = {
                                         "watch": {
                                             "receiver": "services.data-lake.in",
                                         },
-                                        "enumSource": [{
-                                            "source": "receiver",
-                                        }, ""],
+                                        "enumSource": [
+                                            ["", "{{ receiver }}"],
+                                        ],
                                         "options": {
                                             "grid_columns": 4,
                                         },

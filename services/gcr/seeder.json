@@ -168,10 +168,10 @@
             "receiver": "services.data-lake.in"
           },
           "enumSource": [
-            {
-              "source": "receiver"
-            },
-            ""
+            [
+              "",
+              "{{ receiver }}"
+            ]
           ],
           "options": {
             "grid_columns": 4
