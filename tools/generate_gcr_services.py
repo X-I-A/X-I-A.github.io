@@ -153,17 +153,14 @@ seeder_schema = {
                                 "properties": {
                                     "insight": {
                                         "type": "string",
-                                        "title": "Save to Data Lake?",
+                                        "title": "Save to Data Lake endpoint",
                                         "watch": {
                                             "receiver": "services.data-lake.in",
                                         },
-                                        "enumSource": [
-                                            ["", "{{ receiver }}"],
-                                        ],
+                                        "template": "{{receiver}}",
                                         "options": {
                                             "grid_columns": 4,
                                         },
-                                        "default": "",
                                     },
                                     "destination": {
                                         "type": "string",
@@ -188,7 +185,7 @@ seeder_schema = {
                                         }
                                     },
                                 },
-                                "required": ["insight", "destination", "topic", "sa-name"],
+                                "required": ["destination", "topic", "sa-name"],
                             }
                         },
                         "required": ["name", "service", "deploy"],
